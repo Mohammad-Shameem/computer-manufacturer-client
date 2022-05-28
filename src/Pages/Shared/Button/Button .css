@@ -1,0 +1,15 @@
+.button {
+  background-color: #00008b;
+  color: #ffff;
+  font-weight: 700;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px cyan;
+  transition: transform 1.5s, box-shadow 3s;
+}
+.button:hover {
+  transform: scaleX(1.1);
+  box-shadow: none;
+  background-color: #00008b;
+}

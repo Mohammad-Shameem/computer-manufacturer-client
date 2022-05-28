@@ -1,0 +1,82 @@
+[
+  {
+    "img": "https://i.ibb.co/DVTR99c/cooling.jpg",
+    "name": "Cooling Fan",
+    "Description": "A computer fan is any fan inside, or attached to, a computer case used for active cooling. Fans are used to draw cooler air into the case from the outside, expel warm air from inside and move air across a heat sink to cool a particular component. Both axial and sometimes centrifugal (blower/squirrel-cage) fans are used in computers. Computer fans commonly come in standard sizes, such as 92 mm, 120 mm (most common), 140 mm, and even 200-220 mm. Computer fans are powered and controlled using 3-pin or 4-pin fan connectors.",
+    "Available_Quantity": 500,
+    "Minimum_Order_Quantity": 20,
+    "price": 20
+  },
+  {
+    "img": "https://i.ibb.co/QPZSqnN/cpu.jpg",
+    "name": "Central Processing Unit",
+    "Description": "The computer's central processing unit (CPU) is the portion of a computer that retrieves and executes instructions. The CPU is essentially the brain of a CAD system. It consists of an arithmetic and logic unit (ALU), a control unit, and various registers. The CPU is often simply referred to as the processor.",
+    "Available_Quantity": 100,
+    "Minimum_Order_Quantity": 10,
+    "price": 30
+  },
+  {
+    "img": "https://i.ibb.co/DzxFTqJ/gpu.jpg",
+    "name": "Graphics Processing Unit",
+    "Description": "What does GPU stand for? Graphics processing unit, a specialized processor originally designed to accelerate graphics rendering. GPUs can process many pieces of data simultaneously, making them useful for machine learning, video editing, and gaming applications.",
+    "Available_Quantity": 300,
+    "Minimum_Order_Quantity": 15,
+    "price": 40
+  },
+  {
+    "img": "https://i.ibb.co/7QqmS1M/keyboard.jpg",
+    "name": "Mechanical Keyboard",
+    "Description": "Mechanical keyboards are computer keyboards that have switches under each key, rather than the rubber membranes used in most common keyboards. Physical switches give mechanical keyboards a less 'mushy' feel — every keypress can be clearly felt, making them perfect for precise and accurate typing.",
+    "Available_Quantity": 450,
+    "Minimum_Order_Quantity": 22,
+    "price": 25
+  },
+  {
+    "img": "https://i.ibb.co/bQt6fFG/motherboard.jpg",
+    "name": "MotherBoard",
+    "Description": "The motherboard is the backbone that ties the computer's components together at one spot and allows them to talk to each other. Without it, none of the computer pieces, such as the CPU, GPU, or hard drive, could interact. Total motherboard functionality is necessary for a computer to work well.",
+    "Available_Quantity": 250,
+    "Minimum_Order_Quantity": 18,
+    "price": 28
+  },
+  {
+    "img": "https://i.ibb.co/sjgX3qq/mouse.jpg",
+    "name": "Highest Ability Mouse",
+    "Description": "The mouse is a small, movable device that lets you control a range of things on a computer. Most types of mouse have two buttons, and some will have a wheel in between the buttons. Most types of mouse connect to the computer with a cable, and use the computer's power to work. Some types of mouse are wireless.",
+    "Available_Quantity": 600,
+    "Minimum_Order_Quantity": 22,
+    "price": 22
+  },
+  {
+    "img": "https://i.ibb.co/Qbr7r02/nvme.jpg",
+    "name": "Nonvolatile Memory express",
+    "Description": "What is NVMe? NVMe (non-volatile memory express) is a host controller interface and storage protocol created to accelerate the transfer speed of data between enterprise and client systems and solid-state drives over a computer's high-speed Peripheral Component Interconnect Express bus.",
+    "Available_Quantity": 400,
+    "Minimum_Order_Quantity": 12,
+    "price": 32
+  },
+  {
+    "img": "https://i.ibb.co/Lh2HT69/psu.jpg",
+    "name": "Power Supply Unit",
+    "Description": "A power supply unit (PSU) converts mains AC to low-voltage regulated DC power for the internal components of a computer. Modern personal computers universally use switched-mode power supplies. Some power supplies have a manual switch for selecting input voltage, while others automatically adapt to the mains voltage.",
+    "Available_Quantity": 550,
+    "Minimum_Order_Quantity": 35,
+    "price": 35
+  },
+  {
+    "img": "https://i.ibb.co/h7XZtvF/ram.jpg",
+    "name": "Random Access Memory",
+    "Description": "Random access memory (RAM) is a computer's short-term memory, which it uses to handle all active tasks and apps. None of your programs, files, games, or streams would work without RAM.",
+    "Available_Quantity": 800,
+    "Minimum_Order_Quantity": 25,
+    "price": 38
+  },
+  {
+    "img": "https://i.ibb.co/QfvM5xw/ssssd.jpg",
+    "name": "Solid State Device",
+    "Description": "A solid-state drive (SSD) is a new generation of storage device used in computers. SSDs use flash-based memory, which is much faster than a traditional mechanical hard disk. Upgrading to an SSD is one of the best ways to speed up your computer",
+    "Available_Quantity": 850,
+    "Minimum_Order_Quantity": 30,
+    "price": 15
+  }
+]
