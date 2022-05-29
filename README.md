@@ -13,6 +13,9 @@ project link : computer-manufacturer-parts.firebaseapp.com
 - Backend implemented with Node.js
 - Data stored mongodb atlas.
 - Data are secured by JWT.
+
+* Implemented payment test by stripe .
+
 - Messaging the user by (SMTP) nodemailer with Mailgun tranporter.
 
 ## Available Scripts
