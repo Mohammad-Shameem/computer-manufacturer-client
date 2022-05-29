@@ -13,7 +13,7 @@ const Purchase = () => {
   console.log(quantity);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/newtools/${id}`, {
+    fetch(`https://warm-cove-56009.herokuapp.com/newtools/${id}`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
       },
@@ -59,7 +59,7 @@ const Purchase = () => {
       productImage,
       totalPrice,
     };
-    fetch("http://localhost:5000/orders", {
+    fetch("https://warm-cove-56009.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

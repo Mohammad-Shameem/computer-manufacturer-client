@@ -20,7 +20,7 @@ const AddReview = () => {
       rating: rating,
       review: review,
     };
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://warm-cove-56009.herokuapp.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

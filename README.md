@@ -1,6 +1,19 @@
-# Getting Started with Create React App
+# Bit & Bytes.co
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# check out the project
+
+project link : computer-manufacturer-parts.firebaseapp.com
+
+# project summery
+
+- This is computer manufacturer parts website.Every order,payment,shipment is in control of admin.Admin can controll everything form Dashboard.Simple easy using project.
+- Build up by react.js
+- Design by daisy ui
+- Responsive with Tailwind css
+- Backend implemented with Node.js
+- Data stored mongodb atlas.
+- Data are secured by JWT.
+- Messaging the user by smp nodemailer with Mailgun tranporter.
 
 ## Available Scripts
 

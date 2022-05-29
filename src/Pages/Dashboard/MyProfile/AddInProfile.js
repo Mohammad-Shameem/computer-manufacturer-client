@@ -15,9 +15,9 @@ const AddInProfile = () => {
     error,
     refetch,
   } = useQuery(["newUser", user], () =>
-    fetch(`http://localhost:5000/user?email=${user?.email}`).then((res) =>
-      res.json()
-    )
+    fetch(
+      `https://warm-cove-56009.herokuapp.com/user?email=${user?.email}`
+    ).then((res) => res.json())
   );
   if (isLoading) {
     return <Loading></Loading>;
@@ -36,7 +36,7 @@ const AddInProfile = () => {
       number,
     };
 
-    fetch(`http://localhost:5000/useraddinfo/${user.email}`, {
+    fetch(`https://warm-cove-56009.herokuapp.com/useraddinfo/${user.email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

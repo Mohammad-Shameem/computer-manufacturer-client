@@ -18,15 +18,15 @@ const MyOrder = () => {
     isLoading,
     refetch,
   } = useQuery(["myOrders", user], () =>
-    fetch(`http://localhost:5000/order?email=${user?.email}`).then((res) =>
-      res.json()
-    )
+    fetch(
+      `https://warm-cove-56009.herokuapp.com/order?email=${user?.email}`
+    ).then((res) => res.json())
   );
   if (isLoading) {
     return <Loading></Loading>;
   }
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/order/${id}`, {
+    fetch(`https://warm-cove-56009.herokuapp.com/order/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
