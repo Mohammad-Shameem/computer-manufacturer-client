@@ -13,7 +13,7 @@ project link : computer-manufacturer-parts.firebaseapp.com
 - Backend implemented with Node.js
 - Data stored mongodb atlas.
 - Data are secured by JWT.
-- Messaging the user by smp nodemailer with Mailgun tranporter.
+- Messaging the user by (SMTP) nodemailer with Mailgun tranporter.
 
 ## Available Scripts
 
