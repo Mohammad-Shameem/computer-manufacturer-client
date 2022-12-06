@@ -7,7 +7,7 @@ import PageTitle from "../Shared/PageTitle/PageTitle";
 const MakeAdmin = () => {
   // const [users, setUser] = useState([]);
   // useEffect(() => {
-  //   fetch("https://warm-cove-56009.herokuapp.com/alluser")
+  //   fetch("http://localhost:5000/alluser")
   //     .then((res) => res.json())
   //     .then((data) => setUser(data));
   // }, []);
@@ -16,7 +16,7 @@ const MakeAdmin = () => {
     isLoading,
     refetch,
   } = useQuery("userAdmin", () =>
-    fetch("https://warm-cove-56009.herokuapp.com/alluser", {
+    fetch("http://localhost:5000/alluser", {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
       },
@@ -26,7 +26,7 @@ const MakeAdmin = () => {
     return <Loading></Loading>;
   }
   const makeAdmin = (email) => {
-    fetch(`https://warm-cove-56009.herokuapp.com/user/admin/${email}`, {
+    fetch(`http://localhost:5000/user/admin/${email}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accesstoken")}`,

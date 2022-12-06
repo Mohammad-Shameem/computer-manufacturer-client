@@ -26,7 +26,7 @@ const CheckoutForm = ({ order }) => {
   const elements = useElements();
   useEffect(() => {
     if (totalPrice) {
-      fetch("https://warm-cove-56009.herokuapp.com/create-payment-intent", {
+      fetch("http://localhost:5000/create-payment-intent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ const CheckoutForm = ({ order }) => {
         transactionId: paymentIntent.id,
         order,
       };
-      fetch(`https://warm-cove-56009.herokuapp.com/order/${_id}`, {
+      fetch(`http://localhost:5000/order/${_id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

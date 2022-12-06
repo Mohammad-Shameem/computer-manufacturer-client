@@ -14,9 +14,7 @@ const MoreTools = () => {
     error,
     refetch,
   } = useQuery("/moretools", () =>
-    fetch("https://warm-cove-56009.herokuapp.com/tools").then((res) =>
-      res.json()
-    )
+    fetch("http://localhost:5000/tools").then((res) => res.json())
   );
   if (isLoading) {
     return <Loading></Loading>;
@@ -43,7 +41,7 @@ const MoreTools = () => {
               modules={[Navigation]}
               className="mySwiper"
             >
-              {tools.map((tool) => (
+              {tools?.map((tool) => (
                 <SwiperSlide>
                   <div className="card card-compact w-96 bg-base-100 shadow-xl">
                     <figure>
@@ -66,3 +64,4 @@ const MoreTools = () => {
 };
 
 export default MoreTools;
+//

@@ -46,7 +46,7 @@ const AddProduct = () => {
             Minimum_Order_Quantity: data.order_quantity,
             price: data.product_Price,
           };
-          fetch("https://warm-cove-56009.herokuapp.com/addproduct", {
+          fetch("http://localhost:5000/addproduct", {
             method: "POST",
             headers: {
               "content-type": "application/json",

@@ -11,14 +11,14 @@ const ManageProduct = () => {
     error,
     refetch,
   } = useQuery("tools", () =>
-    fetch(`https://warm-cove-56009.herokuapp.com/alltools`, {
+    fetch(`http://localhost:5000/alltools`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
       },
     }).then((res) => res.json())
   );
   const handleProductDelete = (productId) => {
-    fetch(`https://warm-cove-56009.herokuapp.com/deletetool/${productId}`, {
+    fetch(`http://localhost:5000/deletetool/${productId}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

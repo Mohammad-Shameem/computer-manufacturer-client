@@ -13,9 +13,9 @@ const Dashboard = () => {
     error,
     refetch,
   } = useQuery(["newuser", user], () =>
-    fetch(
-      `https://warm-cove-56009.herokuapp.com/user?email=${user?.email}`
-    ).then((res) => res.json())
+    fetch(`http://localhost:5000/user?email=${user?.email}`).then((res) =>
+      res.json()
+    )
   );
   if (isLoading) {
     return <Loading></Loading>;

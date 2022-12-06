@@ -15,7 +15,7 @@ const Payment = () => {
   const { id } = useParams();
   const [order, setOrder] = useState([]);
   useEffect(() => {
-    fetch(`https://warm-cove-56009.herokuapp.com/payorder/${id}`)
+    fetch(`http://localhost:5000/payorder/${id}`)
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, []);

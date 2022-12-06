@@ -8,7 +8,7 @@ const useToken = (user) => {
     console.log(user?.user);
     const currentUser = { email: email, name: name };
     if (email && name) {
-      fetch(`https://warm-cove-56009.herokuapp.com/adduser/${email}`, {
+      fetch(`http://localhost:5000/adduser/${email}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

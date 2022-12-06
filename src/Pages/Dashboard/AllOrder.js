@@ -11,7 +11,7 @@ const AllOrder = () => {
     isLoading,
     refetch,
   } = useQuery("allorder", () =>
-    fetch("https://warm-cove-56009.herokuapp.com/allorders", {
+    fetch("http://localhost:5000/allorders", {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
       },
@@ -23,7 +23,7 @@ const AllOrder = () => {
   }
 
   const shipOrder = (orderId) => {
-    fetch(`https://warm-cove-56009.herokuapp.com/adminorderupdate/${orderId}`, {
+    fetch(`http://localhost:5000/adminorderupdate/${orderId}`, {
       method: "PATCH",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
@@ -39,7 +39,7 @@ const AllOrder = () => {
   };
 
   const handleDeleteOrder = (orderId) => {
-    fetch(`https://warm-cove-56009.herokuapp.com/orderadmindelete/${orderId}`, {
+    fetch(`http://localhost:5000/orderadmindelete/${orderId}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accesstoken")}`,

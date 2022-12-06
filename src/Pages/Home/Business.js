@@ -59,12 +59,12 @@ const Business = () => {
               </small>
             </p>
           </div>
-          <div className=" w-[70%] mx-auto mt-10 lg:block sm:hidden">
+          <div className=" w-[70%] mx-auto mt-10 hidden lg:block">
             <div
               style={{ boxShadow: "5px 5px 8px #19D3AE" }}
-              className="card w-[950px] bg-base-100  mx-auto"
+              className="card w-[950px] bg-base-100  mx-auto "
             >
-              <div className="card-body">
+              <div className="card-body ">
                 <h2 className="card-title text-[#19D3AE] text-3xl">
                   Have any question about us or get <br />a product request?
                 </h2>
