@@ -13,9 +13,9 @@ const Dashboard = () => {
     error,
     refetch,
   } = useQuery(["newuser", user], () =>
-    fetch(`http://localhost:5000/user?email=${user?.email}`).then((res) =>
-      res.json()
-    )
+    fetch(
+      `https://computer-manufacturer-server.up.railway.app/user?email=${user?.email}`
+    ).then((res) => res.json())
   );
   if (isLoading) {
     return <Loading></Loading>;

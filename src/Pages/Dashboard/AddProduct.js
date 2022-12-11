@@ -46,13 +46,16 @@ const AddProduct = () => {
             Minimum_Order_Quantity: data.order_quantity,
             price: data.product_Price,
           };
-          fetch("http://localhost:5000/addproduct", {
-            method: "POST",
-            headers: {
-              "content-type": "application/json",
-            },
-            body: JSON.stringify(newProduct),
-          })
+          fetch(
+            "https://computer-manufacturer-server.up.railway.app/addproduct",
+            {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify(newProduct),
+            }
+          )
             .then((res) => res.json())
             .then((data) => {
               if (data.acknowledged) {

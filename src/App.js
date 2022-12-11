@@ -25,7 +25,7 @@ import RequireAdmin from "./Pages/Authentication/RequireAdmin";
 
 function App() {
   return (
-    <div className="App" data-theme="aqua">
+    <div className="App overflow-hidden" data-theme="aqua">
       <NavBar></NavBar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>

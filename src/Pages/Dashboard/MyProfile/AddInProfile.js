@@ -15,9 +15,9 @@ const AddInProfile = () => {
     error,
     refetch,
   } = useQuery(["newUser", user], () =>
-    fetch(`http://localhost:5000/user?email=${user?.email}`).then((res) =>
-      res.json()
-    )
+    fetch(
+      `https://computer-manufacturer-server.up.railway.app/user?email=${user?.email}`
+    ).then((res) => res.json())
   );
   if (isLoading) {
     return <Loading></Loading>;
@@ -36,13 +36,16 @@ const AddInProfile = () => {
       number,
     };
 
-    fetch(`http://localhost:5000/useraddinfo/${user.email}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updateInfo),
-    })
+    fetch(
+      `https://computer-manufacturer-server.up.railway.app/useraddinfo/${user.email}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateInfo),
+      }
+    )
       .then((res) => res.json())
       .then(async (data) => {
         if (data.acknowledged === true) {

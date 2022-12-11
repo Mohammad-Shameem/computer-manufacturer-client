@@ -26,14 +26,17 @@ const CheckoutForm = ({ order }) => {
   const elements = useElements();
   useEffect(() => {
     if (totalPrice) {
-      fetch("http://localhost:5000/create-payment-intent", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
-        },
-        body: JSON.stringify({ totalPrice }),
-      })
+      fetch(
+        "https://computer-manufacturer-server.up.railway.app/create-payment-intent",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
+          },
+          body: JSON.stringify({ totalPrice }),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data?.clientSecret) {
@@ -87,14 +90,17 @@ const CheckoutForm = ({ order }) => {
         transactionId: paymentIntent.id,
         order,
       };
-      fetch(`http://localhost:5000/order/${_id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
-        },
-        body: JSON.stringify(payment),
-      })
+      fetch(
+        `https://computer-manufacturer-server.up.railway.app/order/${_id}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
+          },
+          body: JSON.stringify(payment),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           setProcessing(false);

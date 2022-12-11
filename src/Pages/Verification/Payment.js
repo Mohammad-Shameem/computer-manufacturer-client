@@ -15,7 +15,7 @@ const Payment = () => {
   const { id } = useParams();
   const [order, setOrder] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/payorder/${id}`)
+    fetch(`https://computer-manufacturer-server.up.railway.app/payorder/${id}`)
       .then((res) => res.json())
       .then((data) => setOrder(data));
   }, []);

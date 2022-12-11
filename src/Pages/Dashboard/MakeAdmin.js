@@ -7,7 +7,7 @@ import PageTitle from "../Shared/PageTitle/PageTitle";
 const MakeAdmin = () => {
   // const [users, setUser] = useState([]);
   // useEffect(() => {
-  //   fetch("http://localhost:5000/alluser")
+  //   fetch("https://computer-manufacturer-server.up.railway.app/alluser")
   //     .then((res) => res.json())
   //     .then((data) => setUser(data));
   // }, []);
@@ -16,7 +16,7 @@ const MakeAdmin = () => {
     isLoading,
     refetch,
   } = useQuery("userAdmin", () =>
-    fetch("http://localhost:5000/alluser", {
+    fetch("https://computer-manufacturer-server.up.railway.app/alluser", {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
       },
@@ -26,12 +26,15 @@ const MakeAdmin = () => {
     return <Loading></Loading>;
   }
   const makeAdmin = (email) => {
-    fetch(`http://localhost:5000/user/admin/${email}`, {
-      method: "PUT",
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
-      },
-    })
+    fetch(
+      `https://computer-manufacturer-server.up.railway.app/user/admin/${email}`,
+      {
+        method: "PUT",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {

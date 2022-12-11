@@ -11,7 +11,7 @@ const AllOrder = () => {
     isLoading,
     refetch,
   } = useQuery("allorder", () =>
-    fetch("http://localhost:5000/allorders", {
+    fetch("https://computer-manufacturer-server.up.railway.app/allorders", {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
       },
@@ -23,12 +23,15 @@ const AllOrder = () => {
   }
 
   const shipOrder = (orderId) => {
-    fetch(`http://localhost:5000/adminorderupdate/${orderId}`, {
-      method: "PATCH",
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
-      },
-    })
+    fetch(
+      `https://computer-manufacturer-server.up.railway.app/adminorderupdate/${orderId}`,
+      {
+        method: "PATCH",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {
@@ -39,12 +42,15 @@ const AllOrder = () => {
   };
 
   const handleDeleteOrder = (orderId) => {
-    fetch(`http://localhost:5000/orderadmindelete/${orderId}`, {
-      method: "DELETE",
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
-      },
-    })
+    fetch(
+      `https://computer-manufacturer-server.up.railway.app/orderadmindelete/${orderId}`,
+      {
+        method: "DELETE",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {

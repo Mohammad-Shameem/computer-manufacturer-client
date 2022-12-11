@@ -14,7 +14,9 @@ const MoreTools = () => {
     error,
     refetch,
   } = useQuery("/moretools", () =>
-    fetch("http://localhost:5000/tools").then((res) => res.json())
+    fetch("https://computer-manufacturer-server.up.railway.app/tools").then(
+      (res) => res.json()
+    )
   );
   if (isLoading) {
     return <Loading></Loading>;

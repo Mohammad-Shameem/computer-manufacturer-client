@@ -6,12 +6,15 @@ const useAdmin = (user) => {
   useEffect(() => {
     const email = user?.email;
     if (email) {
-      fetch(`http://localhost:5000/admin/${email}`, {
-        method: "GET",
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
-        },
-      })
+      fetch(
+        `https://computer-manufacturer-server.up.railway.app/admin/${email}`,
+        {
+          method: "GET",
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
+          },
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           setAdmin(data);

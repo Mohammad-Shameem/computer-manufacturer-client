@@ -20,7 +20,7 @@ const AddReview = () => {
       rating: rating,
       review: review,
     };
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://computer-manufacturer-server.up.railway.app/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

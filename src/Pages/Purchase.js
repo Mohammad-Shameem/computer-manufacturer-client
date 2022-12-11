@@ -13,11 +13,14 @@ const Purchase = () => {
   console.log(quantity);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/newtools/${id}`, {
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
-      },
-    })
+    fetch(
+      `https://computer-manufacturer-server.up.railway.app/newtools/${id}`,
+      {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         setTool(data);
@@ -59,7 +62,7 @@ const Purchase = () => {
       productImage,
       totalPrice,
     };
-    fetch("http://localhost:5000/orders", {
+    fetch("https://computer-manufacturer-server.up.railway.app/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -8,13 +8,16 @@ const useToken = (user) => {
     console.log(user?.user);
     const currentUser = { email: email, name: name };
     if (email && name) {
-      fetch(`http://localhost:5000/adduser/${email}`, {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(currentUser),
-      })
+      fetch(
+        `https://computer-manufacturer-server.up.railway.app/adduser/${email}`,
+        {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(currentUser),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           const accessToken = data.token;

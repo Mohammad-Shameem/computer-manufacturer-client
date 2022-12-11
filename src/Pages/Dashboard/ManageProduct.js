@@ -11,16 +11,19 @@ const ManageProduct = () => {
     error,
     refetch,
   } = useQuery("tools", () =>
-    fetch(`http://localhost:5000/alltools`, {
+    fetch(`https://computer-manufacturer-server.up.railway.app/alltools`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accesstoken")}`,
       },
     }).then((res) => res.json())
   );
   const handleProductDelete = (productId) => {
-    fetch(`http://localhost:5000/deletetool/${productId}`, {
-      method: "DELETE",
-    })
+    fetch(
+      `https://computer-manufacturer-server.up.railway.app/deletetool/${productId}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
